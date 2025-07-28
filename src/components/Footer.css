@@ -1,0 +1,17 @@
+.footer { background: #323131; color: #fff; font-family: 'Montserrat', serif; padding: 42px 7vw 14px 7vw; }
+.footer-main { display: flex; justify-content: space-between; gap: 70px; padding-bottom: 38px; }
+.footer-col { min-width: 220px; }
+.footer-logo-title { display: flex; align-items: center; font-size: 1.3rem; font-weight: 700; letter-spacing: 2px; margin-bottom: 7px; }
+.footer-desc { margin-top: 14px; opacity: .82; font-size: 0.99rem; }
+.footer-col-title { letter-spacing: 1.2px; font-weight: 600; margin-bottom: 13px; color: #C19B77; font-size: 1.02rem; }
+.footer-links > div { margin: 7px 0; cursor: pointer; }
+.footer-links > div:hover { color: #C19B77; }
+.footer-subscribe-text { font-size: 0.99rem; margin-bottom: 11px; opacity: 0.95; }
+.footer-subscribe-form { display: flex; margin-top: 5px; background: #292929; border-radius: 2px; }
+.footer-subscribe-form input { background: transparent; border: none; color: #fff; padding: 10px 13px; flex: 1; outline: none; font-size: 1rem; }
+.footer-subscribe-form button { background: #C19B77; border: none; color: #fff; font-size: 1.08rem; width: 39px; cursor: pointer; border-radius: 0 2px 2px 0; }
+.footer-divider { height: 1px; background: #525151; margin: 18px 0; }
+.footer-social { display: flex; justify-content: space-between; align-items: center; font-size: 1rem; gap: 22px; }
+.footer-social-icons { display: flex; gap: 13px; }
+.social-circle { background: #232323; border-radius: 50%; padding: 9px 13px; display: inline-block; color: #fff; font-size: 1.13em; }
+.footer-policy-links { display: flex; gap: 13px; align-items: center; font-size: 0.96rem; opacity: 0.92; }
