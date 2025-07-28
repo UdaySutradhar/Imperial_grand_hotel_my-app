@@ -6,8 +6,13 @@ export default function EditableSection({ component, field, defaultValue, classN
   const [value, setValue] = useState(defaultValue);
 
   async function handleSave() {
-    setIsEditing(false);
-    await updateSection(component, field, value);
+    try {
+      setIsEditing(false);
+      await updateSection(component, field, value);
+    } catch {
+      setIsEditing(true);
+      alert("Edit failed. Try again.");
+    }
   }
 
   return (

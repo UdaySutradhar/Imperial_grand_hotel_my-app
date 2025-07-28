@@ -46,13 +46,13 @@ export default function Footer() {
           <span className="social-circle">P</span>
           <span className="social-circle">D</span>
         </div>
-        <div className="footer-copyright">
-          © 2025 Imperial Grand Hotel. All Rights Reserved.
-        </div>
         <div className="footer-policy-links">
           <span>Privacy Policy</span>
           <span>|</span>
           <span>Terms of Use</span>
+        </div>
+        <div className="footer-copyright">
+          © 2025 Imperial Grand Hotel. All Rights Reserved.
         </div>
       </div>
     </footer>

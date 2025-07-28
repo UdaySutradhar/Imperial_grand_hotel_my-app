@@ -18,7 +18,6 @@ export default function Navbar({ homeVersion, onSelectHome }) {
         </div>
       </div>
       <div className="navbar-links">
-        {/* HOME menu with dropdown */}
         <div
           className="navbar-link navbar-home-dropdown"
           style={{ position: "relative" }}

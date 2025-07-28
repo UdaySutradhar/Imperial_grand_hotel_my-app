@@ -1,14 +1,3 @@
-.navbar { background: #323131; color: #fff; font-family: 'Montserrat', serif; display: flex; justify-content: space-between; align-items: center; padding: 36px 7vw 28px 7vw; }
-.navbar-logo { display: flex; align-items: center; gap: 13px; letter-spacing: 2px; }
-.navbar-title { font-size: 1.93rem; font-weight: 700; letter-spacing: 2px; }
-.navbar-subtitle { font-size: 0.9rem; color: #cabdaf; letter-spacing: 2px; line-height: 1.2; }
-.navbar-links { display: flex; gap: 44px; align-items: center; }
-.navbar-link { font-size: 1.02rem; cursor: pointer; letter-spacing: 1.2px; font-weight: 500; transition: color 0.18s; }
-.navbar-link:hover { color: #C19B77; }
-.dropdown-arrow { font-size: 0.75em; margin-left: 3px; }
-
-.editable-section { display: inline-block; vertical-align: middle; }
-.edit-btn { margin-left: 11px; background: #C19B77; color: #fff; border: none; border-radius: 3px; padding: 3px 13px; font-size: 0.92rem; font-weight: 500; cursor: pointer; }
 .navbar-home-dropdown {
   position: relative;
 }
@@ -35,4 +24,41 @@
 .navbar-dropdown-item.active {
   background: #C19B77;
   color: #fff;
+}
+.navbar {
+  background: #323131;
+  color: #fff;
+  font-family: 'Montserrat', serif;
+  display: flex;
+  justify-content: space-between;    /* left logo, right menu */
+  align-items: center;
+  padding: 36px 7vw 28px 7vw;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  letter-spacing: 2px;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 44px;
+  align-items: center;
+  margin-left: auto;
+}
+
+.navbar-link { /* unchanged */
+  font-size: 1.02rem;
+  cursor: pointer;
+  letter-spacing: 1.2px;
+  font-weight: 500;
+  transition: color 0.18s;
+  position: relative;
+}
+
+.dropdown-arrow {
+  font-size: 0.75em;
+  margin-left: 3px;
 }
