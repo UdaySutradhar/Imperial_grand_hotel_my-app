@@ -1,15 +1,7 @@
 from flask import Flask, request, jsonify
-from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app)
 
-# Optional root route to avoid "Not Found" page
-@app.route("/", methods=["GET"])
-def root():
-    return "Backend is running. POST to /update-section."
-
-# Main API route connected to frontend
 @app.route("/update-section", methods=["POST"])
 def log_edit():
     try:
@@ -29,5 +21,4 @@ def log_edit():
         return jsonify({"message": "Edit logged successfully"}), 200
 
     except Exception as e:
-        print("Error logging edit:", str(e))
         return jsonify({"error": str(e)}), 500
