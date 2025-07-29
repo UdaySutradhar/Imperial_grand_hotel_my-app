@@ -1,7 +1,6 @@
-const BASE_URL = "/api";
 export async function updateSection(component, field, value) {
   try {
-    const res = await fetch(`${BASE_URL}/update-section`, {
+    const res = await fetch("http://localhost:5050/update-section", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ component, field, value }),
@@ -10,7 +9,8 @@ export async function updateSection(component, field, value) {
     if (!res.ok) throw new Error(data.error || "Unknown error");
     return data;
   } catch (err) {
-    console.error("POST to Serverless Function failed:", err);
+    // THIS catches and triggers your alert
+    console.error("POST to Flask failed:", err);
     throw err;
   }
 }

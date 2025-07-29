@@ -1,7 +1,11 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 
+# Initialize app
 app = Flask(__name__)
+CORS(app)  # Allow cross-origin requests from React
 
+# Use the required POST API
 @app.route("/update-section", methods=["POST"])
 def log_edit():
     try:
@@ -21,4 +25,8 @@ def log_edit():
         return jsonify({"message": "Edit logged successfully"}), 200
 
     except Exception as e:
+        print("Error logging edit:", str(e))
         return jsonify({"error": str(e)}), 500
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5050, debug=True) 
