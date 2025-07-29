@@ -1,7 +1,6 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 
-# Initialize app
 app = Flask(__name__)
 CORS(app)  
 
@@ -26,7 +25,3 @@ def log_edit():
     except Exception as e:
         print("Error logging edit:", str(e))
         return jsonify({"error": str(e)}), 500
-
-# Run the app
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5050) 
