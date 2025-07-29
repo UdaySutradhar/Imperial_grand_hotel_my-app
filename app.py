@@ -2,8 +2,14 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app)  
+CORS(app)
 
+# Optional root route to avoid "Not Found" page
+@app.route("/", methods=["GET"])
+def root():
+    return "Backend is running. POST to /update-section."
+
+# Main API route connected to frontend
 @app.route("/update-section", methods=["POST"])
 def log_edit():
     try:
