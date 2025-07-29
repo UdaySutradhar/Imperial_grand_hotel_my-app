@@ -1,5 +1,4 @@
-const BASE_URL = "https://imperial-grand-hotel-my-app.vercel.app";
-
+const BASE_URL = "/api";
 export async function updateSection(component, field, value) {
   try {
     const res = await fetch(`${BASE_URL}/update-section`, {
@@ -7,12 +6,11 @@ export async function updateSection(component, field, value) {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ component, field, value }),
     });
-
     const data = await res.json();
     if (!res.ok) throw new Error(data.error || "Unknown error");
     return data;
   } catch (err) {
-    console.error("POST to Flask failed:", err);
+    console.error("POST to Serverless Function failed:", err);
     throw err;
   }
 }
